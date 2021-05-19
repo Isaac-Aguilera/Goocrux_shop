@@ -1,0 +1,6 @@
+.miniaturas {
+    object-fit: contain;
+    transform-origin: center;
+    height: 250px;
+    width: 100%;
+}
