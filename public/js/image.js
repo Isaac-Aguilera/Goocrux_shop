@@ -1,3 +1,6 @@
+/*
+    Muestra la preview de los videos.
+*/
 function bigImg(x) {
     x.autoplay = true;
     x.preload = "auto";

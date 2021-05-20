@@ -1,5 +1,10 @@
+/*
+    Cambia el listado de productos y los lista segun la categoria indicada.
+*/
 function cambiarCategoria(id, token) {
-
+    /*
+        Lanza una peticion ajax con el id de la categoria que quiere mostrar.
+    */
     $.ajax({
         url: '/cambiarCategoria',
         method: 'post',
@@ -8,16 +13,24 @@ function cambiarCategoria(id, token) {
             'id': id
         },
         error: function (response) {
+            /*
+                Si la peticion ajax terorna error lanza un pop up comunicando el error.
+            */
             alert(response['statusText']);
-            //alert("Has de fer login per a poder comentar!");
         },
         success: function (response) {
+            /*
+                Si la peticion ajax funciona correctamente lista todos los videos de esa categoria y muestra la categoria.
+            */
             document.getElementById('productes').innerHTML = response;
         }
     });
 
 }
 
+/*
+    Muestra la preview de los videos.
+*/
 function bigImg(x) {
     x.autoplay = true;
     x.preload = "auto";

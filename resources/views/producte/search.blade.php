@@ -28,10 +28,8 @@
                                         </div>
                                         <div class="col-7">
                                             <strong><span title="{{ $producte->name }}">
-                                                    <blade
-                                                        if|%20(%20Str%3A%3Alength(%24producte-%3Ename)%20%3E%3D%2090)>
+                                                    @if(Str::length($producte->name)>=90)
                                                         {{ Str::of($producte->name)->limit(87, ' ...') }}
-
                                                     @else
                                                         <span>{{ $producte->name }}</span>
                                                     @endif
@@ -39,10 +37,8 @@
                                             <span class="text-danger">Price:</span> <span
                                                 class="h4 font-weight-bold text-danger">{{ $producte->preu }}€</span><br><br>
                                             <span class="text-muted" title="{{ $producte->description }}">
-                                                <blade
-                                                    if|%20(%20Str%3A%3Alength(%24producte-%3Edescription)%20%3E%3D%20184)>
+                                                @if(Str::length($producte->description)>=184)
                                                     {{ Str::of($producte->description)->limit(181, ' ...') }}
-
                                                 @else
                                                     {{ $producte->description }}
                                                 @endif

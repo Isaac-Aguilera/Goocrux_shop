@@ -38,7 +38,7 @@
 }
 
 .card {
-    height: 550px;
+    height: 585px;
     position: relative;
     top: 0px;
     transition: top ease 0.5s;

@@ -1,5 +1,11 @@
+/*
+    Elimina un producto.
+*/
 function eliminarProducte(id, token) {
     $('#modal').modal('toggle');
+    /*
+        Lanza una peticion ajax con el id del producto que se elimina.
+    */
     $.ajax({
         url: '/eliminarProducte',
         method: 'post',
@@ -8,6 +14,9 @@ function eliminarProducte(id, token) {
             'id': id
         },
         error: function (response) {
+            /*
+                Si la peticion ajax terorna error lanza un pop up comunicando el error.
+            */
             var alertDiv = `<div class="modal fade" id="modal2">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -25,9 +34,11 @@ function eliminarProducte(id, token) {
             </div>`;
             document.getElementById("container").innerHTML += alertDiv;
             $('#modal2').modal('toggle');
-            //alert("Has de fer login per a poder comentar!");
         },
         success: function (response) {
+            /*
+                Si la peticion ajax funciona correctamente indica que el producto ha sido eliminado.
+            */
             cambiar = `<div class="card-header">Product deleted!</div>
             <div class="card-body">  
                 <p class="alert alert-success">The product was deleted!</p>

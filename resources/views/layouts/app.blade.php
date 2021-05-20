@@ -46,7 +46,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <form class="d-flex mt-3" method="GET" action="{{ route('search') }}">
-                            <input class="form-control me-2 col-10 w-100" type="search" placeholder="Search"
+                            <input class="form-control me-2 w-100" type="search" placeholder="Search"
                                 aria-label="Search" id="search" name="search">
                             <button class="btn btn-outline-success ml-2" type="submit">Search</button>
                         </form>
