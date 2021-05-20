@@ -22,12 +22,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+
 </head>
 
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="z-index: 1;">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand neon-button" href="{{ url('/') }}">
                     Shop
                 </a>
