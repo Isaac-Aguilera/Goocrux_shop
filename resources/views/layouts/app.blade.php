@@ -94,6 +94,15 @@
             @yield('content')
         </main>
     </div>
+    <div class="cookie-disclaimer">
+        <div class="cookie-close accept-cookie"><i class="fa fa-times"></i></div>
+		<div class="container">
+            		<p>
+                		We use cookies for functional pruposes on this website.
+            		</p>
+            		<button type="button" class="btn btn-success accept-cookie">Accept!</button>
+    		</div>
+    	</div>
     <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
             class="fa fa-chevron-up"></i></a>
 </body>
@@ -103,23 +112,4 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
-
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
-                $('#back-to-top').fadeIn();
-            } else {
-                $('#back-to-top').fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        $('#back-to-top').click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 400);
-            return false;
-        });
-    });
-
-</script>
+<script src="{{ asset('js/navbar.js') }}"></script>
